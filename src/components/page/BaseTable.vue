@@ -14,24 +14,26 @@
             </el-table-column>
             <el-table-column prop="address" label="地址" :formatter="formatter">
             </el-table-column>
-            <el-table-column  label="头像">
+            <el-table-column label="头像">
                 <template scope="scope">
                     <img :src="scope.row.logo">
                 </template>
-                
+
             </el-table-column>
             <el-table-column label="操作" width="180">
                 <template scope="scope">
                     <el-button size="small"
-                            @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+                               @click="handleEdit(scope.$index, scope.row)">编辑
+                    </el-button>
                     <el-button size="small" type="danger"
-                            @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+                               @click="handleDelete(scope.$index, scope.row)">删除
+                    </el-button>
                 </template>
             </el-table-column>
         </el-table>
         <div class="pagination">
             <el-pagination
-                    @current-change ="handleCurrentChange"
+                    @current-change="handleCurrentChange"
                     layout="prev, pager, next"
                     :total="1000">
             </el-pagination>
@@ -58,6 +60,7 @@
             getData(){
                 let self = this;
                 this.$axios.post('/api/table',{page:self.cur_page}).then((res) => {
+                    console.log(res);
                     self.tableData = res.data.data;
                 })
             },
@@ -75,4 +78,6 @@
             }
         }
     }
+
+
 </script>

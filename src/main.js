@@ -8,6 +8,7 @@ import 'element-ui/lib/theme-default/index.css';    // 默认主题
 import "babel-polyfill";
 import './mock/index.js';
 Vue.use(ElementUI);
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 Vue.prototype.$axios = axios;
 new Vue({
     router,
