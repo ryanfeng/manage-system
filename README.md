@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # manage-system #
 基于Vue.js 2.x系列 + Element UI 的后台管理系统解决方案。[线上地址](http://work.omwteam.com/)
 
@@ -306,3 +307,7 @@ import 'element-ui/lib/theme-default/index.css';    // 默认主题
 ### 浅绿色皮肤 ###
 
 ![Image text](https://github.com/lin-xin/manage-system/raw/master/screenshots/wms2.png)
+=======
+# manage-system
+基于Vue2.0搭建的后台管理系统
+>>>>>>> ad9903fd3e755f7fe28e99719b76657c10430975
